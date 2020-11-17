@@ -21,12 +21,13 @@
       * [Tests](#tests)
 
     ## Installation
-
+ 
+  First run npm install, then update your MySQL connection and password in the "db/connection.js" folder.
     
 
     ## Usage
 
-    no current usage
+    run node index.js in your terminal to prompt inquirer.
 
     ## License
 
