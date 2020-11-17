@@ -95,17 +95,17 @@ async function addEmployee() {
   
     let managerId;
     if (answer.manager !== "None") {
-      const managerRecord = employee.find(
+      const manager = employee.find(
         resultEntry =>
           answer.manager === resultEntry.first_name + " " + resultEntry.last_name
       );
   
-      managerId = managerRecord.id;
+      managerId = manager.id;
     }
-    const roleRecord = roles.find(
+    const role = roles.find(
       resultEntry => resultEntry.title === answer.role
     );
-    const roleId = roleRecord.id;
+    const roleId = role.id;
   
     await em.addEmployee(answer.firstName, answer.lastName, roleId, managerId);
   
