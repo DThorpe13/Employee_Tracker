@@ -14,13 +14,21 @@ async function optionPrompt() {
     const answer = await inquirer.prompt(app.choice)
 
     switch(answer.choice){
+
         case 'VIEW_EMPLOYEES': return viewEmployees();
+
         case 'VIEW_DEPARTMENTS': return viewDepartments();
+
         case 'VIEW_ROLES': return viewRoles();
+
         case 'ADD_EMPLOYEE' : return addEmployee();
+
         case 'ADD_DEPARTMENT': return addDepartment();
+
         case 'ADD_ROLE': return addRole();
+
         case 'UPDATE_EMPLOYEE_ROLE': return updateRole();
+        
         case 'EXIT': process.exit() ;
     }
 
